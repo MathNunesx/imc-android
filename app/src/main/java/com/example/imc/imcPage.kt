@@ -1,6 +1,5 @@
 package com.example.imc
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -8,11 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class imcPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_imc_page)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -20,14 +19,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun abreHomepage(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-    fun abreIMCpage(view: View) {
-        val intent = Intent(this, imcPage::class.java)
-        startActivity(intent)
-    }
-    fun abreMediapage(view: View) {}
-    fun abreSobrepage(view: View) {}
+    fun calculaIMC(view: View) {}
 }
