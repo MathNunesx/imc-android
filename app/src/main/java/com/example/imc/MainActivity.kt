@@ -32,5 +32,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, MediaPage::class.java)
         startActivity(intent)
     }
-    fun abreSobrepage(view: View) {}
+    fun abreSobrepage(view: View) {
+        val intent = Intent(this, AboutPage::class.java)
+        startActivity(intent)
+    }
 }
